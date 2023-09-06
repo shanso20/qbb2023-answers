@@ -12,9 +12,8 @@ transcripts = np.loadtxt( "/Users/cmdb/Desktop/swc-python/Day_2_Lecture/all_anno
 samples = np.loadtxt( "/Users/cmdb/Desktop/swc-python/Day_2_Lecture/all_annotated.csv", delimiter=",", max_rows=1, dtype="<U30" )[2:]
 # print( "samples: ", samples[0:5] )
 
-#data = np.loadtxt( "/Users/cmdb/Desktop/swc-python/Day_2_Lecture/all_annotated.csv", delimiter=",", dtype=np.float32, skiprows=1, usecols=range(2, len(samples) + 2) )
-data = np.loadtxt( "/Users/cmdb/Desktop/swc-python/Day_2_Lecture/all_annotated.csv", delimiter=",", dtype=np.float32, skiprows=1, usecols=range(2, len(samples)) )
-print( "data: ", data[0:5, 0:5] )
+data = np.loadtxt( "/Users/cmdb/Desktop/swc-python/Day_2_Lecture/all_annotated.csv", delimiter=",", dtype=np.float32, skiprows=1, usecols=range(2, len(samples) + 2) )
+# print( "data: ", data[0:5, 0:5] )
 
 # Find row with transcript of interest
 for i in range(len(transcripts)):
@@ -22,12 +21,17 @@ for i in range(len(transcripts)):
         row = i
 
 # Find columns with samples of interest
-cols = []
+cols_females = []
 for i in range(len(samples)):
     if "female" in samples[i]:
-        cols.append(i)
+        cols_females.append(i)
 
-# Subset data of interest
+cols_males = []
+for i in range(len(samples)):
+    if "male" in samples[i]:
+        cols_males.append(i)
+
+# Subset data of interest here
 expression = data[row, cols]
 
 # Prepare data
