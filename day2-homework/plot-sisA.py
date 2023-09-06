@@ -51,7 +51,9 @@ for x in range(len(x_males)):
 
 # Plot data
 fig, ax = plt.subplots()
-ax.set_title( "FBtr0073461" )
+ax.set_title( "sisA" )
+ax.set_xlabel( "developmental stage")
+ax.set_ylabel( "mRNA abundance (RPKM)")
 ax.plot( x_axis, y_males )
 ax.plot( x_axis, y_females )
 ax.plot( x_axis, y_males_2 )
