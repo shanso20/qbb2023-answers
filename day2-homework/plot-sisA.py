@@ -22,25 +22,35 @@ for i in range(len(transcripts)):
 
 # Find columns with samples of interest
 cols_females = []
+cols_males = []
 for i in range(len(samples)):
     if "female" in samples[i]:
         cols_females.append(i)
-
-cols_males = []
-for i in range(len(samples)):
-    if "male" in samples[i]:
+    else:
         cols_males.append(i)
+# print(cols_females)
+# print(cols_males)
 
-# Subset data of interest here
-expression = data[row, cols]
+
+# Subset data of interest
+F_expression = data[row, cols_females]
+M_expression = data[row, cols_males]
 
 # Prepare data
-x = samples[cols]
-y = expression
+x_females = samples[cols_females]
+x_males = samples[cols_males]
+y_females = F_expression
+y_males = M_expression
+
+x_axis = []
+for x in range(len(x_males)):
+    x_axis.append(x_males[x].lstrip("male_"))
+print(x_axis)
 
 # Plot data
 fig, ax = plt.subplots()
 ax.set_title( "FBtr0073461" )
-ax.plot( x, y )
+ax.plot( x_axis, y_males )
+ax.plot( x_axis, y_females )
 fig.savefig( "FBtr0073461.png" )
 plt.close( fig )
