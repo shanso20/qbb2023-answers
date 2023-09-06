@@ -42,15 +42,18 @@ x_males = samples[cols_males]
 y_females = F_expression
 y_males = M_expression
 
+y_males_2 = 2 * y_males
+
 x_axis = []
 for x in range(len(x_males)):
     x_axis.append(x_males[x].lstrip("male_"))
-print(x_axis)
+# print(x_axis)
 
 # Plot data
 fig, ax = plt.subplots()
 ax.set_title( "FBtr0073461" )
 ax.plot( x_axis, y_males )
 ax.plot( x_axis, y_females )
+ax.plot( x_axis, y_males_2 )
 fig.savefig( "FBtr0073461.png" )
 plt.close( fig )
