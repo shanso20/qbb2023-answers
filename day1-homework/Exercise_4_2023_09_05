@@ -1,0 +1,31 @@
+#!/usr/bilbn/env python
+import numpy
+
+f = open("data/inflammation-01.csv", "r")
+patients = f.readlines()
+
+patient_list = []
+
+for patient in patients:
+	patient = patient.rstrip("\n")
+	patient = patient.split(",")
+	patient_ints = []
+
+	for number in patient:
+		number = int(number)
+		patient_ints.append(number)
+
+	patient_list.append(patient_ints)
+	
+patient_1 = patient_list[0]
+patient_5 = patient_list[4]
+
+patient_diffs = []
+for x in range(len(patient_1)):
+	differences = patient_1[x] - patient_5[x]
+	patient_diffs.append(differences)
+print(patient_diffs)
+
+# just checking things:
+print(len(patient_diffs))
+print(len(patient_1))

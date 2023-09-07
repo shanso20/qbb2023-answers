@@ -1,0 +1,16 @@
+#!/usr/bilbn/env python
+
+f = open("data/inflammation-01.csv", "r")
+lines = f.readlines()
+
+patient_5 = lines[4]
+patient_5 = patient_5.rstrip("\n")
+patient_5 = patient_5.split(",")
+first_flare_up = patient_5[0]
+tenth_flare_up = patient_5[9]
+last_flare_up = patient_5[-1]
+Exercise_1_Answer = [first_flare_up, tenth_flare_up, last_flare_up]
+
+print(Exercise_1_Answer)
+
+# Answer is 0 flare-ups on the first day, 4 on the tenth, and 1 on the last
