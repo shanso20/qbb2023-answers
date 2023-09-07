@@ -1,0 +1,25 @@
+#!/usr/bilbn/env python
+import numpy
+
+f = open("../data/inflammation-01.csv", "r")
+patients = f.readlines()
+
+patient_list = []
+
+for patient in patients:
+	patient = patient.rstrip("\n")
+	patient = patient.split(",")
+	patient_ints = []
+
+	for number in patient:
+		number = int(number)
+		patient_ints.append(number)
+
+	patient_list.append(patient_ints)
+
+# print(patient_list)
+
+numpy_array = numpy.array(patient_list)
+# print(numpy_array)
+print(numpy.mean(numpy_array, axis = 0))
+print(numpy_array.shape)
