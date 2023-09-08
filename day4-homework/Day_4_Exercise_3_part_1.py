@@ -30,7 +30,7 @@ for pop in population:
 
 	fixation_time = []
 	for i in range(50):
-		trials = genetic_drift(0.5, 50)
+		trials = genetic_drift(0.5, pop)
 		fixation_time.append(trials)
 
 #print(fixation_time)
