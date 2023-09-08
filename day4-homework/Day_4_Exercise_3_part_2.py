@@ -51,7 +51,7 @@ fig, ax = plt.subplots()
 ax.scatter(allele_freq, averages)
 
 ax.set_title( "Exercise 3" )
-ax.set_xlabel( "Population Size")
+ax.set_xlabel( "Allele Frequency")
 ax.set_ylabel( "Time to Fixation")
 
 fig.savefig( "Day_4_Exercise_3_part_2" )
