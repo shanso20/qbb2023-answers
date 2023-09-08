@@ -48,7 +48,7 @@ print(averages)
 
 fig, ax = plt.subplots()
 
-ax.plot(population, averages)
+ax.scatter(population, averages)
 
 ax.set_title( "Exercise 3" )
 ax.set_xlabel( "Population Size")
