@@ -1,0 +1,18 @@
+1) For the line plot I named Day_4_Exercise_2.png (titled Genetic Drift, x-axis = # generations, y-axis = allele frequency), which contains the line plots of today's Exercise 2:
+	The plot shows 30 iterations of my code simulating the genetic drift in a population that started with an allele frequency of 0.5 and a 
+	population size of 1754 (which also happens to be my lunch number from elementarys school. But that is an unrealted point). Since I started the
+	allele frequency at 0.5, it makes sense that it takes quite a while in terms of number of generation to reach fixation for each iteration, and 
+	the odds that the allele will fix to 1 or 0 (become fixed in the population or disappear) are about equal. That's why we don't see any significant
+	trend in one direction or the other. If the population size had been smaller, the alleles would have likely fixed in less generations, while if it
+	had been larger, it would have taken longer.
+
+2) For the histogram shown in the same file (Day_4_Exercise_2.png, titled Allele Fixation, x-axis = time to fixation, y-axis = distribution):
+	The plot shows a histogram of the number of iterations of my genetic drift simulation code that took a certain amount of time to fixation. In real life, 
+	the more generations that pass, the more likely it is that the allele will fix (one way or the other), which is why the peak of the histogram is skewed 
+	to the left with fewer and fewer iterations having long times to fixation.
+
+3) For the scatter plot shown in my file Day_4_Exercise_3_part_2.png (title = Exercise 3, x-axis = population size, y-axis = time to fixation):
+	The plot shows a scatter of the time to fixation taken for an allele to fix in a population of a set size based on the starting allele frequency.
+	Intuitively, alleles with frequencies closer to 0.5 will take the longest time to fix in a population (and they could fix either way, to 0 or 1), 
+	while an allele with a very low frequency (close to 0) will likely disappear from the population (fix to 0) very fast, and an allele that starts 
+	with a frequency close to 1 would likely fix to be present in the entire population within few generations.
