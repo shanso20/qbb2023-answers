@@ -1,0 +1,16 @@
+digraph graphfile {
+ATT -> TTG;
+ATT -> TTT;
+TTA -> TAT;
+TTG -> TGA;
+CTT -> TTA;
+GAT -> ATT;
+TCT -> CTT;
+CAT -> ATT;
+TTC -> TCT;
+TAT -> ATT;
+TTC -> TCA;
+ATT -> TTC;
+TCA -> CAT;
+TGA -> GAT;
+}
