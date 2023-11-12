@@ -20,3 +20,19 @@ While both approaches show similar overall detection of changes in methylation, 
 
 Q4: What is the effect of tumorigenesis on global methylation patterns?
 Tumorigenesis results (mostly) in an increase in global methylation patters, though some loci are demethylated. This makes sense, as in order to grow, tumors need to suppress the expression of many growth-regulatory and tumor-supressor genes, while activating some that allow it to redirect blood flow and gain new abilities.
+
+Q5:
+What changes can you observe between the normal and tumor methylation landscape? What do you think the possible effects are of the changes you observed?
+The tumor DNMT3A gene seems to be more methylated than the normal gene. This will cause silencing of DNMT3A, which will result in under-methylation (and thus over-expression) of other genes in the genome.
+
+Q6:
+What does it mean for a gene to be “imprinted”? 
+Imprinting is epigenetic modifications to the genome--such as methylation--that silence one copy of a gene in a diploid organism so that only one copy (from either mother or father) is expressed.
+
+Q7:
+What is happening when you select the option to phase the reads? What is required in order to phase the reads?
+When I phase the reads, the tracks become split into 3 groups labeled 1, 2, or NONE. In order to phase the reads, there needs to be enough imprinting information (aka, about maternal vs paternal allele expression) to group the reads into clusters.
+
+Q8: 
+Can any set of reads be phased? Explain your answer.
+No, not any set of reads can be phased. In order to phase the reads, there must be information available about differential expression of the maternal vs paternally-inherited alleles to group the reads into clusters (labeled 1, 2, or none). If the gene or region isn't imprinted and this information is not available, the reads cannot be phased.
